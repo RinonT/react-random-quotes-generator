@@ -1,0 +1,127 @@
+body {
+    max-width: 900px;
+    background-color: rgba(204, 0, 255, 0.096);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 48px;
+    font-style: italic;
+    color: blue;
+    margin-left: 48px;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: unset;
+}
+
+button svg {
+    transform: translateY(5px);
+}
+
+button svg:hover {
+    fill: blue;
+}
+
+.btn--container button {
+    border: none;
+    background-color: unset;
+    outline: none;
+}
+
+.btn--container button:hover {
+    color: blue;
+}
+.quotes {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    margin-top: 32px;
+    color: #000000;
+}
+
+.quotes--description {
+    position: relative;
+    background: #333333;
+    margin-top: 48px;
+    margin-left: 48px;
+    margin-right: 16px;
+    padding-left: 16px;
+    padding-top: 32px;
+    padding-bottom: 16px;
+}
+
+.quotes--description svg {
+    position: absolute;
+    left: 90%;
+    top: 43px;
+    fill: #ffff;
+}
+
+.author {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px;
+    color: #F2F2F2;
+}
+
+.author~p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #828282;
+    margin-bottom: 16px;
+}
+
+.author--quotes {
+    font-size: 28px;
+}
+
+.homepage-link {
+    display: block;
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+.homepage-link:hover {
+    color: blue;
+}
+
+.quotes--container p {
+    border-left: 8px solid #F7DF94;
+    padding-left: 40px;
+}
+
+.authorName {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin-left: 42px;
+}
+
+.quotes--container p:not(:first-of-type) {
+    margin-top: 70px;
+}
+
+.btn--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+/*# sourceMappingURL=/styles.8986bff4.css.map */
