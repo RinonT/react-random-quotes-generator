@@ -33947,7 +33947,7 @@ function getQuotes() {
   }, /*#__PURE__*/_react.default.createElement(_RandomButton.default, {
     handleClick: showRandomQuote
   })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "quotes--container"
+    className: "quotes--container random-quote"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "quotes"
   }, " ", /*#__PURE__*/_react.default.createElement("q", null, quote.quoteText))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
@@ -33967,7 +33967,7 @@ function getQuotes() {
   })), /*#__PURE__*/_react.default.createElement("p", {
     className: "author"
   }, quote.quoteAuthor), /*#__PURE__*/_react.default.createElement("p", {
-    className: ""
+    className: "genre"
   }, quote.quoteGenre))));
 }
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./RandomButton":"Components/RandomButton.js"}],"Components/QuotesFromAuthor.js":[function(require,module,exports) {
@@ -34013,7 +34013,7 @@ function QuotesFromTheAutour() {
   }, /*#__PURE__*/_react.default.createElement("h2", {
     className: "authorName"
   }, authorName), /*#__PURE__*/_react.default.createElement("div", {
-    className: "quotes--container"
+    className: "quotes--container quotesAuthor"
   }, quotesFromAuthor.map(quote => /*#__PURE__*/_react.default.createElement("p", {
     className: "quotes author--quotes",
     key: quote._id

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-
 const quoteFromAuthorUrl = 'https://quote-garden.herokuapp.com/api/v2/authors/'
-
 
 export default function QuotesFromTheAutour() {
   const [quotesFromAuthor, setquotesFromAuthor] = useState([])
@@ -27,7 +25,7 @@ export default function QuotesFromTheAutour() {
   return (
     <article className="page--article">
       <h2 className="authorName">{authorName}</h2>
-      <div className="quotes--container">
+      <div className="quotes--container quotesAuthor">
         {quotesFromAuthor.map(quote => <p className="quotes author--quotes" key={quote._id}><q>{quote.quoteText}</q></p>)}
       </div>
       <Link className="homepage-link" to="/">

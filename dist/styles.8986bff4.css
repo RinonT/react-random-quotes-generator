@@ -45,10 +45,14 @@ button svg:hover {
 }
 .quotes {
     font-weight: 500;
+    padding: 16px;
     font-size: 32px;
     line-height: 120%;
     margin-top: 32px;
     color: #000000;
+    border: 3px solid blue;
+    border-style: dotted;
+    background: white;
 }
 
 .quotes--description {
@@ -101,11 +105,6 @@ button svg:hover {
     color: blue;
 }
 
-.quotes--container p {
-    border-left: 8px solid #F7DF94;
-    padding-left: 40px;
-}
-
 .authorName {
     font-weight: bold;
     font-size: 36px;
@@ -123,5 +122,17 @@ button svg:hover {
     justify-content: flex-end;
 }
 
+.random-quote {
+    margin-left: 50px;
+    margin-right: 17px;
+}
+
+@media(min-width: 760px) {
+    .quotes--container.quotesAuthor {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+    }
+}
 
 /*# sourceMappingURL=/styles.8986bff4.css.map */
