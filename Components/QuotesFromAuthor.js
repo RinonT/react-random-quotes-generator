@@ -11,7 +11,7 @@ export default function QuotesFromTheAutour() {
   async function getQuotesFromAuthor() {
     const response = await fetch(quoteFromAuthorUrl + authorName + "?page=1&limit=10");
     const quotesData = await response.json();
-    setquotesFromAuthor(quotesData);
+    setquotesFromAuthor(quotesData.quotes);
   }
 
 
@@ -19,12 +19,12 @@ export default function QuotesFromTheAutour() {
     getQuotesFromAuthor()
   }, [])
 
-  if (!quotesFromAuthor.quotes) return null
+  if (!quotesFromAuthor) return null
    return (
      <article className="page--article">
       <h2 className="authorName">{authorName}</h2>
         <div className="quotes--container">
-          {quotesFromAuthor.quotes.map(quote => <p className="quotes author--quotes" key={quote._id}><q>{quote.quoteText}</q></p>)}
+          {quotesFromAuthor.map(quote => <p className="quotes author--quotes" key={quote._id}><q>{quote.quoteText}</q></p>)}
         </div>
         <Link className="homepage-link" to="/">
         back to homepage
