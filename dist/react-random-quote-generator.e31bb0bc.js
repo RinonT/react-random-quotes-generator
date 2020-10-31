@@ -33925,7 +33925,7 @@ function getQuotes() {
   async function getQuotes() {
     const response = await fetch(randomQuoteUrl);
     const randomQuote = await response.json();
-    setQuote(randomQuote);
+    setQuote(randomQuote.quote);
   }
 
   (0, _react.useEffect)(() => {
@@ -33936,7 +33936,10 @@ function getQuotes() {
     getQuotes();
   }
 
-  if (!quote.quote) return null;
+  if (!quote) {
+    return null;
+  }
+
   return /*#__PURE__*/_react.default.createElement("article", {
     className: "page--article"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -33947,8 +33950,8 @@ function getQuotes() {
     className: "quotes--container"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "quotes"
-  }, " ", /*#__PURE__*/_react.default.createElement("q", null, quote.quote.quoteText))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: `/${quote.quote.quoteAuthor}`
+  }, " ", /*#__PURE__*/_react.default.createElement("q", null, quote.quoteText))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: `/${quote.quoteAuthor}`
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "quotes--description"
   }, /*#__PURE__*/_react.default.createElement("svg", {
@@ -33963,9 +33966,9 @@ function getQuotes() {
     d: "M16.01 11H4v2h12.01v3L20 12l-3.99-4z"
   })), /*#__PURE__*/_react.default.createElement("p", {
     className: "author"
-  }, quote.quote.quoteAuthor), /*#__PURE__*/_react.default.createElement("p", {
+  }, quote.quoteAuthor), /*#__PURE__*/_react.default.createElement("p", {
     className: ""
-  }, quote.quote.quoteGenre))));
+  }, quote.quoteGenre))));
 }
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./RandomButton":"Components/RandomButton.js"}],"Components/QuotesFromAuthor.js":[function(require,module,exports) {
 "use strict";
@@ -33994,20 +33997,24 @@ function QuotesFromTheAutour() {
   async function getQuotesFromAuthor() {
     const response = await fetch(quoteFromAuthorUrl + authorName + "?page=1&limit=10");
     const quotesData = await response.json();
-    setquotesFromAuthor(quotesData);
+    setquotesFromAuthor(quotesData.quotes);
   }
 
   (0, _react.useEffect)(() => {
     getQuotesFromAuthor();
   }, []);
-  if (!quotesFromAuthor.quotes) return null;
+
+  if (!quotesFromAuthor) {
+    return null;
+  }
+
   return /*#__PURE__*/_react.default.createElement("article", {
     className: "page--article"
   }, /*#__PURE__*/_react.default.createElement("h2", {
     className: "authorName"
   }, authorName), /*#__PURE__*/_react.default.createElement("div", {
     className: "quotes--container"
-  }, quotesFromAuthor.quotes.map(quote => /*#__PURE__*/_react.default.createElement("p", {
+  }, quotesFromAuthor.map(quote => /*#__PURE__*/_react.default.createElement("p", {
     className: "quotes author--quotes",
     key: quote._id
   }, /*#__PURE__*/_react.default.createElement("q", null, quote.quoteText)))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
@@ -34082,7 +34089,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56134" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58320" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
